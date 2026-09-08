@@ -13,6 +13,7 @@ OWNER = "JW-Sthlm"
 REPOSITORIES = [
     "JW-Sthlm.github.io",
     "signal-engine-oss",
+    "frontier-consultancy-public",
     "frontier-consultancy-kit",
     "talks",
     "build-2026-gold",

@@ -41,3 +41,5 @@ Microsoft products can appear as public examples and supported platforms. Micros
 ## Withheld projects
 
 Agent Otto is not promoted publicly. Its original working repository contained internal program transcripts and tenant-specific configuration. A sanitized copy also inherited deprecated Teams AI dependencies with unresolved high-severity advisories. It remains private until it is migrated to the current Teams SDK and passes the public audit.
+
+The former Frontier Consultancy repository history is private. A clean compatibility repository keeps existing `frontier-consultancy-public` Pages links working and redirects them to the sanitized `frontier-consultancy-kit`.

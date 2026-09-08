@@ -74,6 +74,13 @@ PATTERNS = {
     "private key": re.compile(r"-----BEGIN [A-Z ]*PRIVATE KEY-----"),
 }
 
+APPROVED_PUBLIC_CONTACTS = {
+    "frontier-consultancy-kit": {
+        "partners/index.html",
+        "partners/overview/index.html",
+    }
+}
+
 
 def clone(repo: str, destination: Path) -> None:
     subprocess.run(
@@ -113,8 +120,14 @@ def audit(repo: str, root: Path) -> list[str]:
         except UnicodeDecodeError:
             continue
         relative = path.relative_to(root)
+        relative_posix = relative.as_posix()
         for label, pattern in PATTERNS.items():
             for match in pattern.finditer(text):
+                if (
+                    label == "Microsoft work email"
+                    and relative_posix in APPROVED_PUBLIC_CONTACTS.get(repo, set())
+                ):
+                    continue
                 line = text.count("\n", 0, match.start()) + 1
                 findings.append(f"{relative}:{line}: {label}")
     return findings

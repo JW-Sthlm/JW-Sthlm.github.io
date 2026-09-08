@@ -45,3 +45,5 @@ Agent Otto is not promoted publicly. Its original working repository contained i
 The former Frontier Consultancy repository history is private. A clean compatibility repository keeps existing `frontier-consultancy-public` Pages links working and redirects them to the sanitized `frontier-consultancy-kit`.
 
 Frontier Consultancy is intentionally view-only. The public repository supports workshop discovery, participant preparation, and reference after a facilitated session. It does not grant permission for independent delivery, adaptation, or redistribution.
+
+Frontier Consultancy is Microsoft-led for partners. Microsoft track-lead email addresses are allowed only in the approved public contact pages under `partners/`. The audit continues to reject Microsoft work email addresses everywhere else.

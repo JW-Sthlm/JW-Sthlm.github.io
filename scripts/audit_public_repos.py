@@ -22,6 +22,8 @@ REPOSITORIES = [
     "partner-library-starter",
     "slidemaster-framework",
     "executive-assistant-blueprint",
+    "podcast-prep-skill",
+    "content-humanizer",
 ]
 
 LICENSE_FILES = {

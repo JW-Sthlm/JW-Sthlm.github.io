@@ -1,6 +1,6 @@
 # Johan Wallquist: public projects
 
-Source for [jw-sthlm.github.io](https://jw-sthlm.github.io/), a curated front door to reusable AI, agent, partner, and Copilot CLI projects.
+Source for [jw-sthlm.github.io](https://jw-sthlm.github.io/), a curated front door to reusable AI, agent, partner, and skill-based ways of working.
 
 The website distinguishes between:
 
@@ -23,3 +23,5 @@ GitHub Pages serves the repository root from the `main` branch.
 ## Disclaimer
 
 These are personal projects and community assets. They are not Microsoft products.
+
+See [PUBLIC-RELEASE-CHECKLIST.md](PUBLIC-RELEASE-CHECKLIST.md) for the publishing and reuse review applied to featured repositories.

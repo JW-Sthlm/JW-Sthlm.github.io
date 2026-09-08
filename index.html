@@ -11,7 +11,7 @@
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Reusable AI, agent, partner, and Copilot CLI projects by Johan Wallquist.">
+  <meta name="description" content="Reusable AI, agent, partner, and custom skill projects by Johan Wallquist.">
   <meta property="og:title" content="Johan Wallquist: useful things built with AI">
   <meta property="og:description" content="Practical tools, courses, workshops, and agent patterns. Use the finished parts. Fork the licensed ones.">
   <meta property="og:type" content="website">
@@ -277,6 +277,48 @@
       padding-block: clamp(4.5rem, 8vw, 7rem);
       border-top: 1px solid var(--cp-border);
     }
+    .portability {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+      gap: clamp(2rem, 6vw, 6rem);
+      align-items: start;
+    }
+    .portability h2 {
+      max-width: 11ch;
+      margin: 0;
+      font-size: clamp(2.3rem, 5vw, 4.4rem);
+      line-height: 1;
+      letter-spacing: -0.035em;
+    }
+    .portability-copy > p {
+      max-width: 62ch;
+      margin: 0;
+      color: var(--cp-text-soft);
+      font-size: 1.08rem;
+    }
+    .runtime-list {
+      display: grid;
+      gap: 0;
+      margin-top: 2rem;
+      border-top: 1px solid var(--cp-border-strong);
+    }
+    .runtime {
+      display: grid;
+      grid-template-columns: minmax(130px, 0.35fr) 1fr;
+      gap: 1.25rem;
+      padding-block: 1rem;
+      border-bottom: 1px solid var(--cp-border);
+    }
+    .runtime strong { color: var(--cp-text); }
+    .runtime span { color: var(--cp-text-soft); }
+    .runtime-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.25rem;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
     .section-heading {
       display: grid;
       grid-template-columns: minmax(0, 0.9fr) minmax(260px, 0.55fr);
@@ -482,6 +524,26 @@
       color: var(--cp-text-muted);
     }
     .license-note p + p { margin-top: 1rem; }
+    .roadmap-list {
+      border-top: 1px solid var(--cp-border-strong);
+    }
+    .roadmap-item {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.55fr) minmax(0, 1fr);
+      gap: clamp(1.25rem, 4vw, 4rem);
+      padding-block: 2rem;
+      border-bottom: 1px solid var(--cp-border);
+    }
+    .roadmap-item h3 {
+      margin: 0.6rem 0 0;
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      line-height: 1.05;
+    }
+    .roadmap-item p {
+      max-width: 66ch;
+      margin: 0;
+      color: var(--cp-text-soft);
+    }
 
     footer {
       padding-block: 2.5rem;
@@ -525,10 +587,12 @@
       .hero-portrait { min-height: 0; max-width: 520px; }
       .portrait-note { right: 0.75rem; }
       .section-heading, .license-note { grid-template-columns: 1fr; align-items: start; }
+      .portability { grid-template-columns: 1fr; }
       .featured { grid-template-columns: 1fr; }
       .feature:first-child { grid-row: auto; min-height: 480px; }
       .signal-flow { margin-block: 2rem; }
       .project { grid-template-columns: 1fr; }
+      .roadmap-item { grid-template-columns: 1fr; }
       .project-actions { justify-content: flex-start; }
     }
     @media (max-width: 560px) {
@@ -578,7 +642,7 @@
         <p class="hero-kicker">Built for real work</p>
         <h1>Useful things I built with AI.</h1>
         <p class="hero-lede">
-          I am not a full-time developer. I build practical tools, courses, workshops, and agent patterns for partner work, then publish the parts other people can use.
+          I am not a developer. I build practical tools, courses, workshops, and reusable agent skills, then publish the parts other people can use.
         </p>
         <div class="hero-actions">
           <a class="button primary" href="#start">
@@ -601,8 +665,37 @@
           <img src="assets/johan.png" alt="Johan Wallquist">
         </div>
         <div class="portrait-note">
-          <strong>Still not a developer.</strong>
-          Just stopped accepting "too much work to bother" as the end of the conversation.
+          <strong>Still not a developer?</strong>
+          Just realized it's fun and useful to build your own tools.
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell portability">
+        <h2>Skills travel between agent environments.</h2>
+        <div class="portability-copy">
+          <p>
+            Cowork, Microsoft Scout, and Copilot CLI can all use custom skills built around a <code>SKILL.md</code> file. The instructions can move. Scripts, connectors, and tool names may need small changes for each runtime.
+          </p>
+          <div class="runtime-list">
+            <div class="runtime">
+              <strong>Copilot Cowork</strong>
+              <span>Upload a skill file or package and manage it through the Customize page.</span>
+            </div>
+            <div class="runtime">
+              <strong>Microsoft Scout</strong>
+              <span>Discover custom skills from local or synced skill directories.</span>
+            </div>
+            <div class="runtime">
+              <strong>Copilot CLI</strong>
+              <span>Keep skills beside projects and combine them with tools, agents, and local files.</span>
+            </div>
+          </div>
+          <div class="runtime-links">
+            <a href="https://learn.microsoft.com/microsoft-365/copilot/cowork/cowork-customize">Cowork skill documentation</a>
+            <a href="https://learn.microsoft.com/microsoft-scout/use-microsoft-scout#manage-skills">Scout skill documentation</a>
+          </div>
         </div>
       </div>
     </section>
@@ -663,9 +756,9 @@
                 <span class="pill">Self-paced course</span>
                 <span class="repo-name">ai-operator-intro</span>
               </div>
-              <h3>Use Copilot CLI without pretending to be a developer.</h3>
+              <h3>Build agent workflows without pretending to be a developer.</h3>
               <p>
-                A short introduction for consultants and partner-facing roles who want to delegate real work, build repeatable workflows, and understand what the terminal is good for.
+                A short course about delegating real work and building repeatable agent workflows. It uses Copilot CLI as the workshop, but the method travels further.
               </p>
             </div>
             <div class="feature-actions">
@@ -708,11 +801,11 @@
 
           <article class="project" data-category="build use">
             <div>
-              <span class="pill">Copilot CLI plugin</span>
+              <span class="pill">Agent workspace map</span>
               <h3>Copilot Overview</h3>
               <span class="repo-name">copilot-overview</span>
             </div>
-            <p>Generate a personalized HTML map of your Copilot CLI environment, including skills, agents, MCP servers, extensions, and projects.</p>
+            <p>Generate a personalized HTML map of your agent workspace, including skills, agents, MCP servers, extensions, and projects. The current package runs in Copilot CLI.</p>
             <div class="project-actions">
               <a class="project-link" href="https://github.com/JW-Sthlm/copilot-overview">View source</a>
             </div>
@@ -737,7 +830,7 @@
               <h3>Build 2026 Gold</h3>
               <span class="repo-name">build-2026-gold</span>
             </div>
-            <p>Five prompts, a Copilot CLI skill, and a short terminal demo for finding the Build announcements that matter to your own role.</p>
+            <p>Five prompts, a reusable skill, and a short demo for finding the Build announcements that matter to your own role.</p>
             <div class="project-actions">
               <a class="project-link" href="https://jw-sthlm.github.io/build-2026-gold/">Try the prompts</a>
               <a class="project-link" href="https://github.com/JW-Sthlm/build-2026-gold">View source</a>
@@ -750,7 +843,7 @@
               <h3>Talks</h3>
               <span class="repo-name">talks</span>
             </div>
-            <p>Public presentations, storyboards, and presenter material covering agentic work, Copilot CLI, partner transformation, and practical AI adoption.</p>
+            <p>Public presentations, storyboards, and presenter material covering agentic work, partner transformation, and practical AI adoption.</p>
             <div class="project-actions">
               <a class="project-link" href="https://jw-sthlm.github.io/talks/">Browse talks</a>
               <a class="project-link" href="https://github.com/JW-Sthlm/talks">View source</a>
@@ -775,6 +868,37 @@
 
     <section class="section">
       <div class="shell">
+        <div class="section-heading">
+          <h2>Two systems I am packaging next.</h2>
+          <p>
+            Both exist and run today. Their working versions also contain personal configuration, private data boundaries, or Microsoft-specific presentation assets, so the public editions need a clean extraction.
+          </p>
+        </div>
+        <div class="roadmap-list">
+          <article class="roadmap-item">
+            <div>
+              <span class="pill">Public skill in preparation</span>
+              <h3>Slidemaster</h3>
+            </div>
+            <p>
+              A presentation workflow that moves from brief and research through outline, build, visual review, and deployment. The public package will use a generic deck specification, clean templates, and no personal voice or Microsoft branding.
+            </p>
+          </article>
+          <article class="roadmap-item">
+            <div>
+              <span class="pill">Public blueprint in preparation</span>
+              <h3>Boundary-first Executive Assistant</h3>
+            </div>
+            <p>
+              A local-first assistant architecture with layered memory, scheduled work, approval boundaries, and clear separation between mobile summaries and protected detail. The live implementation stays private. The reusable architecture will be published with synthetic examples.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
         <div class="license-note">
           <h2>Public does not always mean open source.</h2>
           <div>
@@ -782,7 +906,7 @@
               Projects marked MIT licensed are explicitly reusable. Other repositories are available to inspect, learn from, or discuss, but no general reuse right is implied.
             </p>
             <p>
-              I am cleaning this up as the library grows. If you want to reuse something without a license, ask first. A rough question beats a confident copyright mistake.
+              The featured repositories have passed a first scan for private links, tenant identifiers, local paths, and common credential patterns. Product-specific Microsoft examples remain where they are useful. If you want to reuse something without a license, ask first.
             </p>
           </div>
         </div>

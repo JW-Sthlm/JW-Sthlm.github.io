@@ -14,8 +14,10 @@ Clawpilot light and dark themes. The light theme uses a warm off-white canvas, w
 
 - A compact sticky navigation.
 - An asymmetric hero with the main statement and Johan's portrait.
+- A portability section explaining how skill packages move between agent environments.
 - A short "start here" sequence using varied editorial blocks.
 - A filterable project library presented as horizontal records rather than an identical card grid.
+- A transparent roadmap for useful systems that still require sanitization.
 - A candid licensing note before the footer.
 
 ## Components

@@ -90,6 +90,8 @@ def text_files(root: Path):
     for path in root.rglob("*"):
         if not path.is_file() or ".git" in path.parts:
             continue
+        if path.as_posix().endswith("/scripts/audit_public_repos.py"):
+            continue
         if path.stat().st_size > 2_000_000:
             continue
         if path.suffix.lower() in TEXT_SUFFIXES or path.name.startswith(".env"):

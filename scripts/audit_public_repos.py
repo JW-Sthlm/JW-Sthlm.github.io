@@ -24,6 +24,7 @@ REPOSITORIES = [
     "executive-assistant-blueprint",
     "podcast-prep-skill",
     "content-humanizer",
+    "visual-sidekick",
 ]
 
 LICENSE_FILES = {

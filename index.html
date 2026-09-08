@@ -544,6 +544,12 @@
       margin: 0;
       color: var(--cp-text-soft);
     }
+    .roadmap-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 1rem;
+    }
 
     footer {
       padding-block: 2.5rem;
@@ -671,7 +677,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="skills">
       <div class="shell portability">
         <h2>Skills travel between agent environments.</h2>
         <div class="portability-copy">
@@ -736,8 +742,8 @@
           <article class="feature">
             <div>
               <div class="feature-meta">
-                <span class="pill">Live demo</span>
-                <span class="repo-name">frontier-consultancy-public</span>
+                <span class="pill licensed">MIT + CC BY</span>
+                <span class="repo-name">frontier-consultancy-kit</span>
               </div>
               <h3>Build the AI-first consultancy.</h3>
               <p>
@@ -745,15 +751,15 @@
               </p>
             </div>
             <div class="feature-actions">
-              <a class="button primary" href="https://jw-sthlm.github.io/frontier-consultancy-public/">Open the experience</a>
-              <a class="button" href="https://github.com/JW-Sthlm/frontier-consultancy-public">View source</a>
+              <a class="button primary" href="https://jw-sthlm.github.io/frontier-consultancy-kit/">Open the experience</a>
+              <a class="button" href="https://github.com/JW-Sthlm/frontier-consultancy-kit">View source</a>
             </div>
           </article>
 
           <article class="feature">
             <div>
               <div class="feature-meta">
-                <span class="pill">Self-paced course</span>
+                <span class="pill licensed">MIT + CC BY</span>
                 <span class="repo-name">ai-operator-intro</span>
               </div>
               <h3>Build agent workflows without pretending to be a developer.</h3>
@@ -787,21 +793,9 @@
         </div>
 
         <div class="project-list">
-          <article class="project" data-category="build">
-            <div>
-              <span class="pill">Source available</span>
-              <h3>Agent Otto</h3>
-              <span class="repo-name">agent-otto</span>
-            </div>
-            <p>A reusable Teams agent pattern for course support, exercises, and FAQ learning loops. Includes Azure infrastructure and the Teams application package.</p>
-            <div class="project-actions">
-              <a class="project-link" href="https://github.com/JW-Sthlm/agent-otto">View source</a>
-            </div>
-          </article>
-
           <article class="project" data-category="build use">
             <div>
-              <span class="pill">Agent workspace map</span>
+              <span class="pill licensed">MIT licensed</span>
               <h3>Copilot Overview</h3>
               <span class="repo-name">copilot-overview</span>
             </div>
@@ -826,7 +820,7 @@
 
           <article class="project" data-category="learn use">
             <div>
-              <span class="pill">Live prompt pack</span>
+              <span class="pill licensed">MIT + CC BY</span>
               <h3>Build 2026 Gold</h3>
               <span class="repo-name">build-2026-gold</span>
             </div>
@@ -839,7 +833,7 @@
 
           <article class="project" data-category="learn use">
             <div>
-              <span class="pill">Presentation library</span>
+              <span class="pill licensed">MIT + CC BY</span>
               <h3>Talks</h3>
               <span class="repo-name">talks</span>
             </div>
@@ -850,48 +844,48 @@
             </div>
           </article>
 
-          <article class="project" data-category="learn">
-            <div>
-              <span class="pill">Workshop source</span>
-              <h3>Copilot CLI Intro</h3>
-              <span class="repo-name">cli-intro</span>
-            </div>
-            <p>Slides, demos, exercises, and reference material for running an introduction to Copilot CLI with partner-facing and business-oriented audiences.</p>
-            <div class="project-actions">
-              <a class="project-link" href="https://github.com/JW-Sthlm/cli-intro">View workshop</a>
-            </div>
-          </article>
         </div>
         <p class="empty-state" hidden>No projects match this filter.</p>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="systems">
       <div class="shell">
         <div class="section-heading">
-          <h2>Two systems I am packaging next.</h2>
+          <h2>Two systems, now public.</h2>
           <p>
-            Both exist and run today. Their working versions also contain personal configuration, private data boundaries, or Microsoft-specific presentation assets, so the public editions need a clean extraction.
+            These were extracted into separate repositories with synthetic examples, portable skills, explicit boundaries, and automated checks. The private working systems remain private.
           </p>
         </div>
         <div class="roadmap-list">
           <article class="roadmap-item">
             <div>
-              <span class="pill">Public skill in preparation</span>
-              <h3>Slidemaster</h3>
+              <span class="pill licensed">MIT licensed</span>
+              <h3>Slidemaster Framework</h3>
             </div>
-            <p>
-              A presentation workflow that moves from brief and research through outline, build, visual review, and deployment. The public package will use a generic deck specification, clean templates, and no personal voice or Microsoft branding.
-            </p>
+            <div>
+              <p>
+                A presentation workflow that moves from brief and research through outline, build, visual review, and deployment. The package includes a portable skill, generic deck specification, HTML shells, themes, validation, tests, and a live demo.
+              </p>
+              <div class="roadmap-actions">
+                <a class="project-link" href="https://jw-sthlm.github.io/slidemaster-framework/">Open demo</a>
+                <a class="project-link" href="https://github.com/JW-Sthlm/slidemaster-framework">View source</a>
+              </div>
+            </div>
           </article>
           <article class="roadmap-item">
             <div>
-              <span class="pill">Public blueprint in preparation</span>
+              <span class="pill licensed">MIT licensed</span>
               <h3>Boundary-first Executive Assistant</h3>
             </div>
-            <p>
-              A local-first assistant architecture with layered memory, scheduled work, approval boundaries, and clear separation between mobile summaries and protected detail. The live implementation stays private. The reusable architecture will be published with synthetic examples.
-            </p>
+            <div>
+              <p>
+                A local-first assistant architecture with layered memory, scheduled work, approval boundaries, and separation between summaries and protected detail. It ships with synthetic templates and automated leak checks.
+              </p>
+              <div class="roadmap-actions">
+                <a class="project-link" href="https://github.com/JW-Sthlm/executive-assistant-blueprint">View blueprint</a>
+              </div>
+            </div>
           </article>
         </div>
       </div>

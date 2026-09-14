@@ -1,9 +1,10 @@
 # Johan Wallquist: public projects
 
-Source for [jw-sthlm.github.io](https://jw-sthlm.github.io/), a curated front door to reusable AI, agent, partner, and skill-based ways of working.
+Source for [jw-sthlm.github.io](https://jw-sthlm.github.io/), a curated front door to Johan Wallquist's published workshops, courses, agent-run systems, and reusable AI projects.
 
 The website distinguishes between:
 
+- **Published work:** finished workshops, learning experiences, and operating systems with a public or clearly marked gated front door.
 - **MIT licensed:** explicitly reusable code and templates.
 - **Live demo:** a working public web experience.
 - **Source available:** public source provided as a reference, without a general reuse license.

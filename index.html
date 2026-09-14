@@ -11,9 +11,9 @@
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Reusable AI, agent, partner, and custom skill projects by Johan Wallquist.">
+  <meta name="description" content="Published workshops, courses, autonomous systems, and reusable AI projects by Johan Wallquist.">
   <meta property="og:title" content="Johan Wallquist: useful things built with AI">
-  <meta property="og:description" content="Practical tools, courses, workshops, and agent patterns. Use the finished parts. Fork the licensed ones.">
+  <meta property="og:description" content="Open the workshops, courses, and systems I have published. Reuse the licensed projects when they fit.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jw-sthlm.github.io/">
   <meta property="og:image" content="https://jw-sthlm.github.io/assets/johan.png">
@@ -524,9 +524,11 @@
       color: var(--cp-text-muted);
     }
     .license-note p + p { margin-top: 1rem; }
+    .showcase-list,
     .roadmap-list {
       border-top: 1px solid var(--cp-border-strong);
     }
+    .showcase-item,
     .roadmap-item {
       display: grid;
       grid-template-columns: minmax(220px, 0.55fr) minmax(0, 1fr);
@@ -534,16 +536,19 @@
       padding-block: 2rem;
       border-bottom: 1px solid var(--cp-border);
     }
+    .showcase-item h3,
     .roadmap-item h3 {
       margin: 0.6rem 0 0;
       font-size: clamp(1.5rem, 3vw, 2.25rem);
       line-height: 1.05;
     }
+    .showcase-item p,
     .roadmap-item p {
       max-width: 66ch;
       margin: 0;
       color: var(--cp-text-soft);
     }
+    .showcase-actions,
     .roadmap-actions {
       display: flex;
       flex-wrap: wrap;
@@ -598,7 +603,7 @@
       .feature:first-child { grid-row: auto; min-height: 480px; }
       .signal-flow { margin-block: 2rem; }
       .project { grid-template-columns: 1fr; }
-      .roadmap-item { grid-template-columns: 1fr; }
+      .showcase-item, .roadmap-item { grid-template-columns: 1fr; }
       .project-actions { justify-content: flex-start; }
     }
     @media (max-width: 560px) {
@@ -631,6 +636,7 @@
       <a class="brand" href="#top">Johan<span>.</span>builds</a>
       <div class="nav-links">
         <a href="#start">Start here</a>
+        <a href="#work">Published work</a>
         <a href="#library">Project library</a>
         <a class="github-nav" href="https://github.com/JW-Sthlm" rel="me">GitHub</a>
         <button class="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">
@@ -648,7 +654,7 @@
         <p class="hero-kicker">Built for real work</p>
         <h1>Useful things I built with AI.</h1>
         <p class="hero-lede">
-          I am not a developer. I build practical tools, courses, workshops, and reusable agent skills, then publish the parts other people can use.
+          I build practical workshops and courses, along with agent-run systems and tools others can reuse. This is where I publish the finished work and projects people can adapt for their own context.
         </p>
         <div class="hero-actions">
           <a class="button primary" href="#start">
@@ -770,6 +776,81 @@
             <div class="feature-actions">
               <a class="button primary" href="https://jw-sthlm.github.io/ai-operator-intro/">Start the course</a>
               <a class="button" href="https://github.com/JW-Sthlm/ai-operator-intro">View source</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="shell">
+        <div class="section-heading">
+          <h2>Published work.</h2>
+          <p>
+            Everything here has been used with real audiences. Public projects open directly. Gated projects are clearly marked.
+          </p>
+        </div>
+
+        <div class="showcase-list">
+          <article class="showcase-item">
+            <div>
+              <span class="pill">Public workshop</span>
+              <h3>Frontier Consultancy</h3>
+            </div>
+            <div>
+              <p>
+                An external workshop for consulting firms working through how AI changes sales and delivery, and what that means for learning and reusable IP. The public site includes the partner track material, exercises, and resources.
+              </p>
+              <div class="showcase-actions">
+                <a class="project-link" href="https://jw-sthlm.github.io/frontier-consultancy-kit/">Open Frontier Consultancy</a>
+                <a class="project-link" href="https://github.com/JW-Sthlm/frontier-consultancy-kit">View source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="showcase-item">
+            <div>
+              <span class="pill">Live program</span>
+              <h3>Copilot CLI Operator Hour</h3>
+            </div>
+            <div>
+              <p>
+                A recurring practical session based on work non-developers already do. The public companion uses the same approach, with a self-paced path people can follow in their own time.
+              </p>
+              <div class="showcase-actions">
+                <a class="project-link" href="https://jw-sthlm.github.io/ai-operator-intro/">Open the public companion</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="showcase-item">
+            <div>
+              <span class="pill">Self-paced</span>
+              <h3>AI Operator course</h3>
+            </div>
+            <div>
+              <p>
+                On-demand learning for partner consultants who want to brief agents, delegate real work, and build workflows they can use again. No developer-first curriculum required.
+              </p>
+              <div class="showcase-actions">
+                <a class="project-link" href="https://jw-sthlm.github.io/ai-operator-intro/course/">Start the course</a>
+                <a class="project-link" href="https://github.com/JW-Sthlm/ai-operator-intro">View source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="showcase-item">
+            <div>
+              <span class="pill">Microsoft sign-in</span>
+              <h3>Agentic AI Partner Library</h3>
+            </div>
+            <div>
+              <p>
+                An almost completely autonomous resource library. Agents find content and route it for review. After approval, they publish the links and keep the collection updated. People still decide what gets approved.
+              </p>
+              <div class="showcase-actions">
+                <a class="project-link" href="https://happy-hill-009457603.7.azurestaticapps.net/">Open the library</a>
+              </div>
             </div>
           </article>
         </div>

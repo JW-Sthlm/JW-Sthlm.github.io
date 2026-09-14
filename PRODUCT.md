@@ -10,7 +10,7 @@ Partner consultants, solution architects, AI practitioners, workshop participant
 
 ## Product Purpose
 
-Create a clear public front door for Johan Wallquist's reusable AI, agent, partner, and skill-based ways of working. Success means visitors can identify the right asset in under a minute, understand which agent environments it can work in, distinguish reusable work from reference material, and open either a working demo or the source repository.
+Create a clear public front door for Johan Wallquist's published workshops, courses, agent-run systems, and reusable AI projects. Success means visitors can identify the right work in under a minute, distinguish finished experiences from reusable assets and reference material, and open the most useful public or clearly marked gated destination.
 
 ## Brand Personality
 
@@ -30,7 +30,7 @@ The page should feel like an experienced architect opening his own toolbox, not 
 
 1. Lead with what someone can use, not with Johan's biography.
 2. Curate aggressively. A smaller useful collection beats a complete inventory.
-3. Show the boundary between licensed assets, source-available references, and live demos.
+3. Separate published experiences from reusable assets, source-available references, and live demos.
 4. Keep GitHub visible as the source of truth.
 5. Sound like a practitioner sharing working material with peers.
 6. Treat Copilot Cowork, Microsoft Scout, and Copilot CLI as different runtimes for reusable skills, not separate editorial categories.

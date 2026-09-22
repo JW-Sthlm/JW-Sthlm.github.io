@@ -81,6 +81,15 @@ APPROVED_PUBLIC_CONTACTS = {
     }
 }
 
+APPROVED_SPEAKER_CONTACTS = {
+    "talks": {
+        "capgemini-graduate-consulting-2026/deck.html": {"jwallquist@microsoft.com"},
+        "capgemini-graduate-consulting-2026/releases/v4-20260922/deck.html": {
+            "jwallquist@microsoft.com"
+        },
+    }
+}
+
 
 def clone(repo: str, destination: Path) -> None:
     subprocess.run(
@@ -125,7 +134,12 @@ def audit(repo: str, root: Path) -> list[str]:
             for match in pattern.finditer(text):
                 if (
                     label == "Microsoft work email"
-                    and relative_posix in APPROVED_PUBLIC_CONTACTS.get(repo, set())
+                    and (
+                        relative_posix in APPROVED_PUBLIC_CONTACTS.get(repo, set())
+                        or match.group().casefold()
+                        in APPROVED_SPEAKER_CONTACTS.get(repo, {})
+                        .get(relative_posix, set())
+                    )
                 ):
                     continue
                 line = text.count("\n", 0, match.start()) + 1

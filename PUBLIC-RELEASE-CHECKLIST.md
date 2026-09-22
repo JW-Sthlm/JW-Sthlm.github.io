@@ -46,4 +46,9 @@ The former Frontier Consultancy repository history is private. A clean compatibi
 
 Frontier Consultancy is intentionally view-only. The public repository supports workshop discovery, participant preparation, and reference after a facilitated session. It does not grant permission for independent delivery, adaptation, or redistribution.
 
-Frontier Consultancy is Microsoft-led for partners. Microsoft track-lead email addresses are allowed only in the approved public contact pages under `partners/`. The audit continues to reject Microsoft work email addresses everywhere else.
+Frontier Consultancy is Microsoft-led for partners. Microsoft track-lead email addresses are allowed only in the approved public contact pages under `partners/`.
+
+The Capgemini audience deck deliberately retains Johan's visible speaker contact.
+Its exception is limited to his exact address in the published deck and its v4
+archive. Other Microsoft work email addresses and other file paths remain
+subject to the audit.

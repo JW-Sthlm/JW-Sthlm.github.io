@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tre prompter att testa på måndag, en för varje sätt att arbeta med AI. Skrivna för kommunikatörer.">
+  <meta property="og:title" content="Börja med ett arbetsflöde">
+  <meta property="og:description" content="Tre prompter att testa på måndag, en för varje sätt att arbeta med AI.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jw-sthlm.github.io/arbetsflode/">
+  <title>Börja med ett arbetsflöde | Johan Wallquist</title>
+  <link rel="icon" href="../assets/johan.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Barlow+Condensed:wght@500;600;700&display=swap">
+  <style>
+    :root {
+      color-scheme: dark;
+      --case: #17191b;
+      --case-panel: #1e2123;
+      --edge: #363b3f;
+      --tray: #f4f1ec;
+      --tray-sunk: #e6e2da;
+      --tray-edge: #cdc7bd;
+      --on-case: #eeebe6;
+      --on-case-muted: #b9bdc0;
+      --on-tray: #191b1d;
+      --on-tray-muted: #53575b;
+      --rose: #b11f4b;
+      --rose-bright: #ff8da6;
+      --signal: #f2c230;
+      --font-display: "Barlow Condensed", "Arial Narrow", "Segoe UI", sans-serif;
+      --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+      --shell: min(860px, 100% - 2.5rem);
+      --radius: 4px;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--case); color: var(--on-case); font-family: var(--font-body); font-size: 1.0625rem; line-height: 1.65; -webkit-text-size-adjust: 100%; }
+    main { width: var(--shell); margin: 0 auto; padding: 3.5rem 0 4rem; }
+    h1, h2, h3 { margin: 0; font-family: var(--font-display); font-weight: 700; line-height: 1; letter-spacing: 0; }
+    h1 { font-size: clamp(2.8rem, 9vw, 4.6rem); }
+    h2 { font-size: 1.9rem; margin-bottom: .6rem; }
+    h3 { font-size: 1.75rem; }
+    p { margin: 0 0 .8rem; max-width: 68ch; }
+    .label { font-family: var(--font-display); font-weight: 600; font-size: .95rem; letter-spacing: .08em; text-transform: uppercase; color: var(--rose-bright); }
+    .intro { margin: 1.2rem 0 2.6rem; color: var(--on-case-muted); font-size: 1.15rem; }
+    .frame { border: 1px solid var(--edge); border-radius: var(--radius); background: var(--case-panel); padding: 1.4rem 1.5rem; margin-bottom: 2.4rem; }
+    .frame p:last-child { margin-bottom: 0; }
+    .modes { display: grid; gap: 1.4rem; }
+    .mode { background: var(--tray); color: var(--on-tray); border: 1px solid var(--tray-edge); border-radius: var(--radius); padding: 1.5rem; }
+    .mode header { display: flex; align-items: baseline; gap: .9rem; margin-bottom: 1rem; }
+    .mode .n { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; color: #fff; background: var(--rose); border-radius: 999px; width: 1.9rem; height: 1.9rem; display: inline-grid; place-items: center; flex: none; transform: translateY(-.15rem); }
+    .where { color: var(--on-tray-muted); }
+    .where b { color: var(--on-tray); }
+    .prompt { background: var(--tray-sunk); border: 1px solid var(--tray-edge); border-radius: var(--radius); padding: 1rem 1.1rem; margin: .9rem 0; }
+    .prompt .label { color: var(--rose); display: block; margin-bottom: .35rem; }
+    .prompt p { margin: 0; font-size: 1.1rem; }
+    .copy { margin-top: .8rem; font: inherit; font-size: .95rem; font-weight: 700; color: #fff; background: var(--rose); border: 0; border-radius: var(--radius); padding: .45rem .9rem; cursor: pointer; }
+    .copy:hover { background: #8d1a3c; }
+    .copy:focus-visible { outline: 3px solid var(--signal); outline-offset: 2px; }
+    .see { margin: 0; color: var(--on-tray-muted); }
+    .see b { color: var(--on-tray); }
+    .note { margin-top: 2.6rem; }
+    .note p { color: var(--on-case-muted); }
+    footer { width: var(--shell); margin: 0 auto; padding: 1.6rem 0 3rem; border-top: 1px solid var(--edge); color: var(--on-case-muted); font-size: .95rem; }
+    footer a { color: var(--rose-bright); }
+    @media (max-width: 560px) { main { padding-top: 2.4rem; } .mode, .frame { padding: 1.15rem; } }
+  </style>
+</head>
+<body>
+  <main>
+    <span class="label">Måndagskortet</span>
+    <h1>Börja med ett arbetsflöde</h1>
+    <p class="intro">Testa tre prompter på måndag, en för varje sätt att arbeta med AI. Byt det som står inom hakparentes mot ert eget material.</p>
+
+    <section class="frame" aria-labelledby="ramar">
+      <h2 id="ramar">Sätt ramarna först</h2>
+      <p>Ta en uppgift ni gör varje månad och redan är trötta på. Vem äger den? Bestäm också var en människa alltid ska granska innan något går ut, och vad ni vill mäta efter fyra veckor.</p>
+      <p>Mät handlingen kommunikationen ska leda till, till exempel anmälningar eller färre frågor i kanalen. Klick säger sällan särskilt mycket.</p>
+    </section>
+
+    <div class="modes">
+      <article class="mode">
+        <header><span class="n">1</span><h3>Du frågar. AI svarar.</h3></header>
+        <p class="where"><b>Var:</b> Microsoft 365 Copilot, i Word, Teams eller Copilot Chat.</p>
+        <div class="prompt">
+          <span class="label">Prompt</span>
+          <p>Läs [dokumentet] och lista de tre frågor mottagarna troligen kommer att ställa efteråt. Svara bara utifrån dokumentet. För varje fråga ska du visa var i texten du hittar stöd.</p>
+          <button class="copy" type="button">Kopiera prompten</button>
+        </div>
+        <p class="see"><b>Det här ska ni se:</b> tre troliga frågor med hänvisningar till texten. Saknas stöd ska svaret säga det.</p>
+      </article>
+
+      <article class="mode">
+        <header><span class="n">2</span><h3>Du delegerar. Agenten gör uppgiften.</h3></header>
+        <p class="where"><b>Var:</b> Copilot Cowork.</p>
+        <div class="prompt">
+          <span class="label">Prompt</span>
+          <p>Gå igenom [det godkända materialet] och frågorna i [kanalen]. Ta fram två riktningar för huvudbudskapet. Visa vad du är osäker på. Publicera ingenting.</p>
+          <button class="copy" type="button">Kopiera prompten</button>
+        </div>
+        <p class="see"><b>Det här ska ni se:</b> två utkast, öppna frågor och vilka källor varje formulering bygger på.</p>
+      </article>
+
+      <article class="mode">
+        <header><span class="n">3</span><h3>Du sätter ramarna. Agenten bevakar.</h3></header>
+        <p class="where"><b>Var:</b> Microsoft Scout. Scout är en förhandsversion inom Frontier-programmet och finns bara för behöriga organisationer.</p>
+        <div class="prompt">
+          <span class="label">Prompt</span>
+          <p>Bevaka [kanalen] och [de godkända källorna] varje morgon. Säg till om samma fråga kommer tillbaka eller om två källor säger olika saker. Skriv inga utkast och publicera ingenting.</p>
+          <button class="copy" type="button">Kopiera prompten</button>
+        </div>
+        <p class="see"><b>Det här ska ni se:</b> en schemalagd kontroll som hör av sig när den hittar något och visar varifrån det kommer. Ingenting går ut automatiskt.</p>
+      </article>
+    </div>
+
+    <section class="note" aria-labelledby="bra">
+      <h2 id="bra">Bra att veta</h2>
+      <p>Använd bara material som er organisation tillåter i AI-verktyg. Tillgången beror på licenser och inställningar, så fråga er IT-avdelning om något saknas. Produktnamnen kommer att ändras. Arbetssätten håller.</p>
+    </section>
+  </main>
+  <footer>
+    <p>Från föreläsningen När AI börjar göra jobbet, med Sara Kiraly och Johan Wallquist från Microsoft. Det här är en personlig sida och ingen officiell Microsoft-publikation.</p>
+    <p><a href="../">Fler publicerade projekt</a></p>
+  </footer>
+  <script>
+    document.querySelectorAll('.copy').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var p = btn.parentElement.querySelector('p');
+        var done = function () { btn.textContent = 'Kopierad'; setTimeout(function () { btn.textContent = 'Kopiera prompten'; }, 1800); };
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(p.textContent.trim()).then(done, function () { btn.textContent = 'Markera och kopiera'; });
+        } else {
+          var r = document.createRange(); r.selectNodeContents(p);
+          var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = 'Markerad, kopiera nu';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -62,6 +62,8 @@
       text-wrap: balance;
     }
     p { margin: 0; text-wrap: pretty; }
+    .private-notice { max-width: 70ch; }
+    .private-notice p + p { margin-top: 1rem; }
     a { color: var(--rose-bright); }
     a:hover { color: #ffb3c3; }
     code, pre { font-family: Consolas, "SFMono-Regular", monospace; }
@@ -633,6 +635,20 @@ Do not infer pain, injury, or a medical condition from the video. If the angle i
       </div>
     </section>
 
+    <section class="section" id="private-integration" aria-labelledby="private-title">
+      <div class="shell">
+        <div class="section-head">
+          <h2 id="private-title">Private wellness and training support.</h2>
+          <p>Longevist is a personal project being rebuilt for use in ChatGPT. Its planned Oura connection will read the account owner's authorized data to support wellness summaries and training guidance.</p>
+        </div>
+        <div class="private-notice">
+          <p>This project is independent of Microsoft and Oura. There is no public sign-up. The information pages are public; the coaching service and its data are private.</p>
+          <p>General wellness support only. Longevist is not a medical service.</p>
+          <p><a href="privacy.html">Read the privacy notice</a> &middot; <a href="terms.html">Read the terms of use</a></p>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <div class="shell sources">
         <div>
@@ -656,7 +672,7 @@ Do not infer pain, injury, or a medical condition from the video. If the angle i
   <footer>
     <div class="shell footer-inner">
       <p>Personal experiment by Johan Wallquist. Not a Microsoft product or medical service.</p>
-      <p><a href="../">Project collection</a> · <a href="https://www.linkedin.com/in/johanwallquist/" target="_blank" rel="noopener">LinkedIn</a></p>
+      <p><a href="privacy.html">Privacy notice</a> &middot; <a href="terms.html">Terms of use</a> &middot; <a href="../">Project collection</a> &middot; <a href="https://www.linkedin.com/in/johanwallquist/" target="_blank" rel="noopener">LinkedIn</a></p>
     </div>
   </footer>
 </body>

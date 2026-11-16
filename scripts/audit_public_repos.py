@@ -87,6 +87,7 @@ APPROVED_SPEAKER_CONTACTS = {
         "capgemini-graduate-consulting-2026/releases/v4-20260922/deck.html": {
             "jwallquist@microsoft.com"
         },
+        "agentic-enterprise-era-2026/deck.html": {"jwallquist@microsoft.com"},
     }
 }
 

@@ -50,5 +50,7 @@ Frontier Consultancy is Microsoft-led for partners. Microsoft track-lead email a
 
 The Capgemini audience deck deliberately retains Johan's visible speaker contact.
 Its exception is limited to his exact address in the published deck and its v4
-archive. Other Microsoft work email addresses and other file paths remain
+archive. The Enter the Agentic Enterprise Era audience deck
+(`talks/agentic-enterprise-era-2026/deck.html`) has the same exception for the
+contact slide. Other Microsoft work email addresses and other file paths remain
 subject to the audit.

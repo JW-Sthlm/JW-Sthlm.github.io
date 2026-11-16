@@ -91,11 +91,22 @@ APPROVED_SPEAKER_CONTACTS = {
     }
 }
 
+# Pages under these folders may link to the people already published on the
+# repository's approved contact pages: the Frontier Consultancy track leads added
+# their own contact links to the AIBS and Business Transformation pages.
+# Any other Microsoft address on these pages still fails.
+CONTACT_LINK_FOLDERS = {
+    "frontier-consultancy-kit": ("aibs/", "business/"),
+}
+
 
 def clone(repo: str, destination: Path) -> None:
     subprocess.run(
         [
             "git",
+            # Deep kit paths pass Windows' 260-character limit in a temp folder.
+            "-c",
+            "core.longpaths=true",
             "clone",
             "--depth",
             "1",
@@ -119,11 +130,27 @@ def text_files(root: Path):
             yield path
 
 
+def listed_contacts(repo: str, root: Path) -> set[str]:
+    """Microsoft addresses published on the repository's approved contact pages."""
+    found: set[str] = set()
+    for relative in APPROVED_PUBLIC_CONTACTS.get(repo, set()):
+        page = root / relative
+        if page.is_file():
+            text = page.read_text(encoding="utf-8")
+            found |= {
+                match.group().casefold()
+                for match in PATTERNS["Microsoft work email"].finditer(text)
+            }
+    return found
+
+
 def audit(repo: str, root: Path) -> list[str]:
     findings: list[str] = []
     if not any((root / name).exists() for name in LICENSE_FILES):
         findings.append("missing root license file")
 
+    listed = listed_contacts(repo, root)
+    link_folders = CONTACT_LINK_FOLDERS.get(repo, ())
     for path in text_files(root):
         try:
             text = path.read_text(encoding="utf-8")
@@ -140,6 +167,10 @@ def audit(repo: str, root: Path) -> list[str]:
                         or match.group().casefold()
                         in APPROVED_SPEAKER_CONTACTS.get(repo, {})
                         .get(relative_posix, set())
+                        or (
+                            relative_posix.startswith(link_folders)
+                            and match.group().casefold() in listed
+                        )
                     )
                 ):
                     continue

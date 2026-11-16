@@ -19,6 +19,8 @@ This is a first-pass scan, not a legal or security review.
 
 The repository includes a weekly GitHub Actions audit in `.github/workflows/public-repo-audit.yml`. It clones every promoted public repository, checks for a root license, and fails on common private-path, tenant, email, and credential patterns.
 
+The audit reads text files only. Word, Excel, PowerPoint and PDF files, including their author metadata and rights protection, need a manual check before they are published.
+
 ## Required before calling a repository open source
 
 - Add an explicit license appropriate to the asset.
@@ -46,7 +48,7 @@ The former Frontier Consultancy repository history is private. A clean compatibi
 
 Frontier Consultancy is intentionally view-only. The public repository supports workshop discovery, participant preparation, and reference after a facilitated session. It does not grant permission for independent delivery, adaptation, or redistribution.
 
-Frontier Consultancy is Microsoft-led for partners. Microsoft track-lead email addresses are allowed only in the approved public contact pages under `partners/`.
+Frontier Consultancy is Microsoft-led for partners. Microsoft track-lead email addresses are published on the approved public contact pages under `partners/`. The AIBS and Business Transformation track pages (`aibs/` and `business/`) may link to the same people: the track leads added those links themselves in October 2026. Any other Microsoft address in the kit fails the audit.
 
 The Capgemini audience deck deliberately retains Johan's visible speaker contact.
 Its exception is limited to his exact address in the published deck and its v4

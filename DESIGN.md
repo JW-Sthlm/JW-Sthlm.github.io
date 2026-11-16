@@ -22,7 +22,7 @@ The metaphor stays visual. Projects are arranged as trays, labels, and a compact
 
 ## Information Architecture
 
-1. The hero introduces Johan as a Partner Technology Strategist focused on AI and AI-first ways of working.
+1. The hero introduces Johan as a Cloud & AI Advisor at Microsoft, focused on AI and AI-first ways of working.
 2. Three entry points separate learning, reusable skills and agents, and talks or workshop material.
 3. The top tray highlights Frontier Consultancy, Operator Hour with AI Operator, and the Agentic AI Partner Library.
 4. One filterable list contains everything published.

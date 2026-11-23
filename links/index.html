@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Johan Wallquist's talks, workshops, practical AI work, and public profiles.">
+  <meta property="og:title" content="Johan Wallquist | Links">
+  <meta property="og:description" content="Talks, workshops, practical AI work, and public profiles.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jw-sthlm.github.io/links/">
+  <meta property="og:image" content="https://jw-sthlm.github.io/assets/johan.png">
+  <title>Johan Wallquist | Links</title>
+  <link rel="canonical" href="https://jw-sthlm.github.io/links/">
+  <link rel="icon" href="../assets/johan.png">
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("scoutTheme");
+      const theme =
+        param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --cp-bg: #f7f4ef;
+      --cp-bg-elevated: #fcfbf8;
+      --cp-surface: #ffffff;
+      --cp-surface-soft: #f5f5f5;
+      --cp-border: #dedede;
+      --cp-border-strong: #919191;
+      --cp-text: #242424;
+      --cp-text-muted: #5c5c5c;
+      --cp-text-soft: #6f6f6f;
+      --cp-accent: #b11f4b;
+      --cp-accent-hover: #9a1a41;
+      --cp-accent-soft: rgba(177, 31, 75, 0.08);
+      --cp-accent-fg: #ffffff;
+      --cp-success: #16a34a;
+      --cp-danger: #dc2626;
+      --cp-warning: #f59e0b;
+      --cp-link: #0078d4;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+      --cp-overlay: rgba(255, 255, 255, 0.8);
+      --cp-panel: rgba(255, 255, 255, 0.86);
+      --cp-panel-strong: rgba(255, 255, 255, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.55);
+      --cp-highlight: rgba(177, 31, 75, 0.12);
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --cp-bg: #3d3b3a;
+      --cp-bg-elevated: #343231;
+      --cp-surface: #292929;
+      --cp-surface-soft: #2e2e2e;
+      --cp-border: #474747;
+      --cp-border-strong: #5f5f5f;
+      --cp-text: #dedede;
+      --cp-text-muted: #919191;
+      --cp-text-soft: #b0b0b0;
+      --cp-accent: #fd8ea1;
+      --cp-accent-hover: #fb7b91;
+      --cp-accent-soft: rgba(253, 142, 161, 0.14);
+      --cp-accent-fg: #1a1a1a;
+      --cp-success: #4ade80;
+      --cp-danger: #f87171;
+      --cp-warning: #fbbf24;
+      --cp-link: #4da6ff;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+      --cp-overlay: rgba(41, 41, 41, 0.88);
+      --cp-panel: rgba(41, 41, 41, 0.72);
+      --cp-panel-strong: rgba(41, 41, 41, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.04);
+      --cp-highlight: rgba(253, 142, 161, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      min-width: 0;
+    }
+
+    html {
+      min-width: 20rem;
+      background: var(--cp-bg);
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(180deg, var(--cp-bg-elevated), var(--cp-bg));
+      color: var(--cp-text);
+      font-family: "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--cp-accent);
+      outline-offset: 4px;
+    }
+
+    .page {
+      width: min(calc(100% - 2rem), 42rem);
+      margin-inline: auto;
+      padding: 2rem 0 2.5rem;
+    }
+
+    .profile {
+      display: grid;
+      grid-template-columns: 5.5rem 1fr;
+      gap: 0.35rem 1rem;
+      align-items: center;
+      margin-bottom: 1.75rem;
+    }
+
+    .portrait {
+      width: 5.5rem;
+      aspect-ratio: 1;
+      object-fit: cover;
+      object-position: center 18%;
+      border: 1px solid var(--cp-border);
+      border-radius: 1rem;
+      background: var(--cp-surface);
+      box-shadow: 0 1px 2px var(--cp-border);
+    }
+
+    .role {
+      margin: 0 0 0.25rem;
+      color: var(--cp-accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 8vw, 3rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      text-wrap: balance;
+    }
+
+    .intro {
+      grid-column: 2;
+      margin: 0.35rem 0 0;
+      color: var(--cp-text-muted);
+      font-size: 1rem;
+      text-wrap: pretty;
+    }
+
+    .links {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .link-card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.5rem 1rem;
+      align-items: center;
+      min-height: 5rem;
+      padding: 1rem 1.1rem;
+      overflow: hidden;
+      border: 1px solid var(--cp-border);
+      border-radius: 1rem;
+      background: var(--cp-surface);
+      box-shadow: 0 1px 2px var(--cp-border);
+      text-decoration: none;
+      transition: border-color 140ms ease, transform 140ms ease;
+    }
+
+    .link-card::before {
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 0.3rem;
+      background: var(--cp-accent);
+      content: "";
+    }
+
+    .link-card:hover {
+      border-color: var(--cp-border-strong);
+      transform: translateY(-1px);
+    }
+
+    .link-card.featured {
+      border-color: var(--cp-accent);
+      background: var(--cp-accent-soft);
+    }
+
+    .link-title {
+      display: block;
+      margin-left: 0.25rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .link-description {
+      display: block;
+      margin: 0.25rem 0 0 0.25rem;
+      color: var(--cp-text-muted);
+      font-size: 0.9rem;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
+
+    .arrow {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      color: var(--cp-accent);
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .elsewhere {
+      margin-top: 2rem;
+    }
+
+    h2 {
+      margin: 0 0 0.75rem;
+      color: var(--cp-text-muted);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .secondary-links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.6rem;
+    }
+
+    .secondary-link {
+      min-height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      padding: 0.75rem 0.85rem;
+      border: 1px solid var(--cp-border);
+      border-radius: 0.625rem;
+      background: var(--cp-surface-soft);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .secondary-link:hover {
+      border-color: var(--cp-accent);
+      color: var(--cp-accent-hover);
+    }
+
+    footer {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--cp-border);
+      color: var(--cp-text-soft);
+      font-size: 0.78rem;
+    }
+
+    @media (max-width: 30rem) {
+      .page {
+        width: min(calc(100% - 1.25rem), 42rem);
+        padding-top: 1.25rem;
+      }
+
+      .profile {
+        grid-template-columns: 4.75rem 1fr;
+        gap: 0.4rem 0.85rem;
+        align-items: center;
+      }
+
+      .portrait {
+        width: 4.75rem;
+      }
+
+      h1 {
+        font-size: 1.75rem;
+        letter-spacing: -0.03em;
+      }
+
+      .role {
+        font-size: 0.68rem;
+        letter-spacing: 0.06em;
+      }
+
+      .intro {
+        grid-column: 1 / -1;
+        margin-top: 0.4rem;
+      }
+
+      .secondary-links {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="profile">
+      <img class="portrait" src="../assets/johan.png" alt="Johan Wallquist">
+      <div>
+        <p class="role">Cloud &amp; AI Advisor at Microsoft</p>
+        <h1>Johan Wallquist</h1>
+      </div>
+      <p class="intro">I share practical AI work, talks, workshops, and tools you can reuse. Start with what is useful to you.</p>
+    </header>
+
+    <nav class="links" aria-label="Main links">
+      <a class="link-card featured" href="https://jw-sthlm.github.io/">
+        <span>
+          <span class="link-title">Browse my work</span>
+          <span class="link-description">Courses, workshops, skills, agents, and field notes.</span>
+        </span>
+        <span class="arrow" aria-hidden="true">&nearr;</span>
+      </a>
+
+      <a class="link-card" href="https://jw-sthlm.github.io/talks/">
+        <span>
+          <span class="link-title">Talks and keynotes</span>
+          <span class="link-description">Slides and public presenter material.</span>
+        </span>
+        <span class="arrow" aria-hidden="true">&nearr;</span>
+      </a>
+
+      <a class="link-card" href="https://jw-sthlm.github.io/frontier-consultancy-kit/">
+        <span>
+          <span class="link-title">Frontier Consultancy</span>
+          <span class="link-description">Workshop material for AI-first consulting delivery.</span>
+        </span>
+        <span class="arrow" aria-hidden="true">&nearr;</span>
+      </a>
+
+      <a class="link-card" href="https://jw-sthlm.github.io/ai-operator-intro/">
+        <span>
+          <span class="link-title">AI Operator</span>
+          <span class="link-description">A practical introduction to working with agents through Copilot CLI.</span>
+        </span>
+        <span class="arrow" aria-hidden="true">&nearr;</span>
+      </a>
+
+      <a class="link-card" href="https://happy-hill-009457603.7.azurestaticapps.net/">
+        <span>
+          <span class="link-title">Agentic AI Partner Library</span>
+          <span class="link-description">Guidance and resources for partner teams.</span>
+        </span>
+        <span class="arrow" aria-hidden="true">&nearr;</span>
+      </a>
+    </nav>
+
+    <section class="elsewhere" aria-labelledby="elsewhere-title">
+      <h2 id="elsewhere-title">Elsewhere</h2>
+      <div class="secondary-links">
+        <a class="secondary-link" href="https://www.linkedin.com/in/johanwallquist/">
+          <span>LinkedIn</span><span aria-hidden="true">&nearr;</span>
+        </a>
+        <a class="secondary-link" href="https://github.com/JW-Sthlm">
+          <span>GitHub</span><span aria-hidden="true">&nearr;</span>
+        </a>
+        <a class="secondary-link" href="https://shows.acast.com/microsoft-partner-podden">
+          <span>Partnerpodden</span><span aria-hidden="true">&nearr;</span>
+        </a>
+        <a class="secondary-link" href="https://docs.github.com/en/copilot/how-tos/copilot-cli">
+          <span>Copilot CLI docs</span><span aria-hidden="true">&nearr;</span>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      Personal projects and community material. These are not Microsoft products.
+    </footer>
+  </main>
+</body>
+</html>

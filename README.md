@@ -2,6 +2,8 @@
 
 Source for [jw-sthlm.github.io](https://jw-sthlm.github.io/), a curated front door to Johan Wallquist's published workshops, courses, agent-run systems, and reusable AI projects.
 
+The compact [links page](https://jw-sthlm.github.io/links/) is the self-hosted replacement for the previous Bitly link-in-bio page.
+
 The website distinguishes between:
 
 - **Published work:** finished workshops, learning experiences, and operating systems with a public or clearly marked gated front door.

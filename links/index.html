@@ -3,75 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Johan Wallquist's talks, workshops, practical AI work, and public profiles.">
+  <meta name="description" content="Johan Wallquist's practical AI work, talks, workshops, and public profiles.">
   <meta property="og:title" content="Johan Wallquist | Links">
-  <meta property="og:description" content="Talks, workshops, practical AI work, and public profiles.">
+  <meta property="og:description" content="Practical AI work, talks, workshops, and public profiles.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jw-sthlm.github.io/links/">
   <meta property="og:image" content="https://jw-sthlm.github.io/assets/johan.png">
   <title>Johan Wallquist | Links</title>
   <link rel="canonical" href="https://jw-sthlm.github.io/links/">
   <link rel="icon" href="../assets/johan.png">
-  <script>
-    (() => {
-      const param = new URLSearchParams(window.location.search).get("scoutTheme");
-      const theme =
-        param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-      document.documentElement.setAttribute("data-theme", theme);
-    })();
-  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&amp;family=Mona+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
   <style>
     :root {
-      color-scheme: light;
-      --cp-bg: #f7f4ef;
-      --cp-bg-elevated: #fcfbf8;
-      --cp-surface: #ffffff;
-      --cp-surface-soft: #f5f5f5;
-      --cp-border: #dedede;
-      --cp-border-strong: #919191;
-      --cp-text: #242424;
-      --cp-text-muted: #5c5c5c;
-      --cp-text-soft: #6f6f6f;
-      --cp-accent: #b11f4b;
-      --cp-accent-hover: #9a1a41;
-      --cp-accent-soft: rgba(177, 31, 75, 0.08);
-      --cp-accent-fg: #ffffff;
-      --cp-success: #16a34a;
-      --cp-danger: #dc2626;
-      --cp-warning: #f59e0b;
-      --cp-link: #0078d4;
-      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
-      --cp-overlay: rgba(255, 255, 255, 0.8);
-      --cp-panel: rgba(255, 255, 255, 0.86);
-      --cp-panel-strong: rgba(255, 255, 255, 0.96);
-      --cp-sheen: rgba(255, 255, 255, 0.55);
-      --cp-highlight: rgba(177, 31, 75, 0.12);
-    }
-    html[data-theme="dark"] {
       color-scheme: dark;
-      --cp-bg: #3d3b3a;
-      --cp-bg-elevated: #343231;
-      --cp-surface: #292929;
-      --cp-surface-soft: #2e2e2e;
-      --cp-border: #474747;
-      --cp-border-strong: #5f5f5f;
-      --cp-text: #dedede;
-      --cp-text-muted: #919191;
-      --cp-text-soft: #b0b0b0;
-      --cp-accent: #fd8ea1;
-      --cp-accent-hover: #fb7b91;
-      --cp-accent-soft: rgba(253, 142, 161, 0.14);
-      --cp-accent-fg: #1a1a1a;
-      --cp-success: #4ade80;
-      --cp-danger: #f87171;
-      --cp-warning: #fbbf24;
-      --cp-link: #4da6ff;
-      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
-      --cp-overlay: rgba(41, 41, 41, 0.88);
-      --cp-panel: rgba(41, 41, 41, 0.72);
-      --cp-panel-strong: rgba(41, 41, 41, 0.96);
-      --cp-sheen: rgba(255, 255, 255, 0.04);
-      --cp-highlight: rgba(253, 142, 161, 0.12);
+      --bg: #0d1117;
+      --panel: #161b22;
+      --panel-hover: #1c2128;
+      --border: #30363d;
+      --border-strong: #484f58;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --accent: #58a6ff;
+      --accent-soft: rgba(88, 166, 255, 0.1);
+      --spotify: #1ed760;
+      --shadow: 0 16px 48px rgba(1, 4, 9, 0.38);
     }
 
     * {
@@ -81,15 +38,17 @@
 
     html {
       min-width: 20rem;
-      background: var(--cp-bg);
+      background: var(--bg);
     }
 
     body {
       min-height: 100vh;
       margin: 0;
-      background: linear-gradient(180deg, var(--cp-bg-elevated), var(--cp-bg));
-      color: var(--cp-text);
-      font-family: "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif;
+      background:
+        radial-gradient(circle at 50% -10rem, rgba(88, 166, 255, 0.12), transparent 28rem),
+        var(--bg);
+      color: var(--text);
+      font-family: "Mona Sans", "Segoe UI", sans-serif;
       line-height: 1.5;
       -webkit-font-smoothing: antialiased;
     }
@@ -99,103 +58,144 @@
     }
 
     a:focus-visible {
-      outline: 3px solid var(--cp-accent);
-      outline-offset: 4px;
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
     }
 
     .page {
-      width: min(calc(100% - 2rem), 42rem);
+      width: min(calc(100% - 2rem), 43rem);
       margin-inline: auto;
-      padding: 2rem 0 2.5rem;
+      padding: 3.5rem 0 2rem;
+    }
+
+    .repo-label {
+      margin: 0 0 1rem;
+      color: var(--muted);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.75rem;
     }
 
     .profile {
       display: grid;
-      grid-template-columns: 5.5rem 1fr;
-      gap: 0.35rem 1rem;
+      grid-template-columns: 4.75rem 1fr auto;
+      gap: 0.5rem 1rem;
       align-items: center;
-      margin-bottom: 1.75rem;
+      padding-bottom: 1.75rem;
+      border-bottom: 1px solid var(--border);
     }
 
     .portrait {
-      width: 5.5rem;
+      grid-row: 1 / span 2;
+      width: 4.75rem;
       aspect-ratio: 1;
       object-fit: cover;
       object-position: center 18%;
-      border: 1px solid var(--cp-border);
-      border-radius: 1rem;
-      background: var(--cp-surface);
-      box-shadow: 0 1px 2px var(--cp-border);
-    }
-
-    .role {
-      margin: 0 0 0.25rem;
-      color: var(--cp-accent);
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: var(--panel);
+      box-shadow: var(--shadow);
     }
 
     h1 {
       margin: 0;
-      font-size: clamp(2rem, 8vw, 3rem);
+      font-size: clamp(2rem, 7vw, 2.8rem);
       line-height: 1;
       letter-spacing: -0.04em;
       text-wrap: balance;
     }
 
+    .role {
+      margin: 0.45rem 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .socials {
+      display: flex;
+      gap: 0.55rem;
+      align-self: start;
+    }
+
+    .social {
+      display: grid;
+      width: 2.75rem;
+      height: 2.75rem;
+      place-items: center;
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      background: var(--panel);
+      color: var(--text);
+      text-decoration: none;
+      transition: background 140ms ease, border-color 140ms ease, color 140ms ease, transform 140ms ease;
+    }
+
+    .social:hover {
+      border-color: var(--border-strong);
+      background: var(--panel-hover);
+      color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .social.spotify:hover {
+      color: var(--spotify);
+    }
+
+    .social svg {
+      width: 1.25rem;
+      height: 1.25rem;
+      fill: currentColor;
+    }
+
     .intro {
-      grid-column: 2;
-      margin: 0.35rem 0 0;
-      color: var(--cp-text-muted);
-      font-size: 1rem;
+      margin: 1.35rem 0 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.6;
       text-wrap: pretty;
     }
 
     .links {
       display: grid;
-      gap: 0.75rem;
+      gap: 0.65rem;
+      margin-top: 2rem;
     }
 
     .link-card {
-      position: relative;
       display: grid;
       grid-template-columns: 1fr auto;
-      gap: 0.5rem 1rem;
+      gap: 0.35rem 1rem;
       align-items: center;
-      min-height: 5rem;
+      min-height: 4.75rem;
       padding: 1rem 1.1rem;
-      overflow: hidden;
-      border: 1px solid var(--cp-border);
-      border-radius: 1rem;
-      background: var(--cp-surface);
-      box-shadow: 0 1px 2px var(--cp-border);
+      border: 1px solid var(--border);
+      border-radius: 0.65rem;
+      background: var(--panel);
       text-decoration: none;
-      transition: border-color 140ms ease, transform 140ms ease;
-    }
-
-    .link-card::before {
-      position: absolute;
-      inset: 0 auto 0 0;
-      width: 0.3rem;
-      background: var(--cp-accent);
-      content: "";
+      transition: background 140ms ease, border-color 140ms ease, transform 140ms ease;
     }
 
     .link-card:hover {
-      border-color: var(--cp-border-strong);
+      border-color: var(--border-strong);
+      background: var(--panel-hover);
       transform: translateY(-1px);
     }
 
     .link-card.featured {
-      border-color: var(--cp-accent);
-      background: var(--cp-accent-soft);
+      border-color: rgba(88, 166, 255, 0.45);
+      background: var(--accent-soft);
+    }
+
+    .link-kind {
+      display: block;
+      margin-bottom: 0.25rem;
+      color: var(--muted);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.04em;
     }
 
     .link-title {
       display: block;
-      margin-left: 0.25rem;
       font-size: 1.05rem;
       font-weight: 700;
       line-height: 1.2;
@@ -203,100 +203,89 @@
 
     .link-description {
       display: block;
-      margin: 0.25rem 0 0 0.25rem;
-      color: var(--cp-text-muted);
+      margin-top: 0.35rem;
+      color: var(--muted);
       font-size: 0.9rem;
-      line-height: 1.35;
+      line-height: 1.4;
       overflow-wrap: anywhere;
     }
 
     .arrow {
       grid-column: 2;
-      grid-row: 1 / span 2;
-      color: var(--cp-accent);
-      font-size: 1.25rem;
-      font-weight: 700;
+      grid-row: 1;
+      color: var(--muted);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 1rem;
+      transition: color 140ms ease, transform 140ms ease;
     }
 
-    .elsewhere {
+    .link-card:hover .arrow {
+      color: var(--accent);
+      transform: translate(2px, -2px);
+    }
+
+    .more {
       margin-top: 2rem;
     }
 
     h2 {
       margin: 0 0 0.75rem;
-      color: var(--cp-text-muted);
-      font-size: 0.8rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+      color: var(--muted);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.72rem;
+      font-weight: 600;
     }
 
     .secondary-links {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.6rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
     }
 
     .secondary-link {
-      min-height: 3rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.5rem;
-      padding: 0.75rem 0.85rem;
-      border: 1px solid var(--cp-border);
-      border-radius: 0.625rem;
-      background: var(--cp-surface-soft);
-      font-size: 0.9rem;
+      padding: 0.55rem 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      color: var(--muted);
+      font-size: 0.85rem;
       font-weight: 600;
       text-decoration: none;
     }
 
     .secondary-link:hover {
-      border-color: var(--cp-accent);
-      color: var(--cp-accent-hover);
+      border-color: var(--border-strong);
+      color: var(--text);
     }
 
     footer {
-      margin-top: 2rem;
+      margin-top: 2.5rem;
       padding-top: 1rem;
-      border-top: 1px solid var(--cp-border);
-      color: var(--cp-text-soft);
+      border-top: 1px solid var(--border);
+      color: var(--muted);
       font-size: 0.78rem;
     }
 
-    @media (max-width: 30rem) {
+    @media (max-width: 35rem) {
       .page {
-        width: min(calc(100% - 1.25rem), 42rem);
-        padding-top: 1.25rem;
+        width: min(calc(100% - 1.25rem), 43rem);
+        padding-top: 1.75rem;
       }
 
       .profile {
-        grid-template-columns: 4.75rem 1fr;
-        gap: 0.4rem 0.85rem;
-        align-items: center;
+        grid-template-columns: 4.25rem 1fr;
       }
 
       .portrait {
-        width: 4.75rem;
+        width: 4.25rem;
       }
 
-      h1 {
-        font-size: 1.75rem;
-        letter-spacing: -0.03em;
-      }
-
-      .role {
-        font-size: 0.68rem;
-        letter-spacing: 0.06em;
+      .socials {
+        grid-column: 1 / -1;
+        margin-top: 0.65rem;
       }
 
       .intro {
-        grid-column: 1 / -1;
-        margin-top: 0.4rem;
-      }
-
-      .secondary-links {
-        grid-template-columns: 1fr;
+        font-size: 1rem;
       }
     }
 
@@ -312,26 +301,40 @@
 </head>
 <body>
   <main class="page">
-    <header class="profile">
-      <img class="portrait" src="../assets/johan.png" alt="Johan Wallquist">
-      <div>
-        <p class="role">Cloud &amp; AI Advisor at Microsoft</p>
-        <h1>Johan Wallquist</h1>
+    <p class="repo-label">johanwallquist / links</p>
+
+    <header>
+      <div class="profile">
+        <img class="portrait" src="../assets/johan.png" alt="Johan Wallquist">
+        <div>
+          <h1>Johan Wallquist</h1>
+          <p class="role">Cloud &amp; AI Advisor at Microsoft</p>
+        </div>
+        <nav class="socials" aria-label="Social profiles">
+          <a class="social" href="https://www.linkedin.com/in/johanwallquist/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.86-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.4v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 11-.01-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .78 0 1.74v20.52C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.74V1.74C24 .78 23.2 0 22.22 0z"/></svg>
+          </a>
+          <a class="social spotify" href="https://open.spotify.com/show/0rdBC4RElD9vSww85FF25r" target="_blank" rel="noopener" aria-label="Partnerpodden on Spotify" title="Partnerpodden on Spotify">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 100 24 12 12 0 000-24zm5.5 17.32a.75.75 0 01-1.03.25c-2.82-1.72-6.37-2.11-10.55-1.16a.75.75 0 11-.33-1.46c4.57-1.04 8.5-.59 11.66 1.34.36.22.47.68.25 1.03zm1.47-3.27a.94.94 0 01-1.29.31c-3.23-1.98-8.15-2.55-11.97-1.4a.94.94 0 11-.54-1.8c4.37-1.32 9.8-.68 13.49 1.58.44.27.58.85.31 1.31zm.13-3.4C15.23 8.35 8.84 8.14 5.14 9.26a1.13 1.13 0 01-.66-2.16c4.25-1.29 11.32-1.04 15.77 1.6a1.13 1.13 0 01-1.15 1.95z"/></svg>
+          </a>
+        </nav>
       </div>
-      <p class="intro">I share practical AI work, talks, workshops, and tools you can reuse. Start with what is useful to you.</p>
+      <p class="intro">I share practical AI work through talks, workshops, and tools you can use.</p>
     </header>
 
     <nav class="links" aria-label="Main links">
       <a class="link-card featured" href="https://jw-sthlm.github.io/">
         <span>
+          <span class="link-kind">START HERE</span>
           <span class="link-title">Browse my work</span>
-          <span class="link-description">Courses, workshops, skills, agents, and field notes.</span>
+          <span class="link-description">Public courses, workshops, skills, agents, and field notes.</span>
         </span>
         <span class="arrow" aria-hidden="true">&nearr;</span>
       </a>
 
       <a class="link-card" href="https://jw-sthlm.github.io/talks/">
         <span>
+          <span class="link-kind">TALKS</span>
           <span class="link-title">Talks and keynotes</span>
           <span class="link-description">Slides and public presenter material.</span>
         </span>
@@ -340,22 +343,25 @@
 
       <a class="link-card" href="https://jw-sthlm.github.io/frontier-consultancy-kit/">
         <span>
+          <span class="link-kind">WORKSHOP</span>
           <span class="link-title">Frontier Consultancy</span>
-          <span class="link-description">Workshop material for AI-first consulting delivery.</span>
+          <span class="link-description">Practical material for AI-first consulting delivery.</span>
         </span>
         <span class="arrow" aria-hidden="true">&nearr;</span>
       </a>
 
       <a class="link-card" href="https://jw-sthlm.github.io/ai-operator-intro/">
         <span>
+          <span class="link-kind">SELF-PACED</span>
           <span class="link-title">AI Operator</span>
-          <span class="link-description">A practical introduction to working with agents through Copilot CLI.</span>
+          <span class="link-description">A practical introduction to working with agents using Copilot CLI.</span>
         </span>
         <span class="arrow" aria-hidden="true">&nearr;</span>
       </a>
 
       <a class="link-card" href="https://happy-hill-009457603.7.azurestaticapps.net/">
         <span>
+          <span class="link-kind">LIBRARY</span>
           <span class="link-title">Agentic AI Partner Library</span>
           <span class="link-description">Guidance and resources for partner teams.</span>
         </span>
@@ -363,21 +369,11 @@
       </a>
     </nav>
 
-    <section class="elsewhere" aria-labelledby="elsewhere-title">
-      <h2 id="elsewhere-title">Elsewhere</h2>
+    <section class="more" aria-labelledby="more-title">
+      <h2 id="more-title">MORE</h2>
       <div class="secondary-links">
-        <a class="secondary-link" href="https://www.linkedin.com/in/johanwallquist/">
-          <span>LinkedIn</span><span aria-hidden="true">&nearr;</span>
-        </a>
-        <a class="secondary-link" href="https://github.com/JW-Sthlm">
-          <span>GitHub</span><span aria-hidden="true">&nearr;</span>
-        </a>
-        <a class="secondary-link" href="https://shows.acast.com/microsoft-partner-podden">
-          <span>Partnerpodden</span><span aria-hidden="true">&nearr;</span>
-        </a>
-        <a class="secondary-link" href="https://docs.github.com/en/copilot/how-tos/copilot-cli">
-          <span>Copilot CLI docs</span><span aria-hidden="true">&nearr;</span>
-        </a>
+        <a class="secondary-link" href="https://github.com/JW-Sthlm" target="_blank" rel="noopener">GitHub &nearr;</a>
+        <a class="secondary-link" href="https://docs.github.com/en/copilot/how-tos/copilot-cli" target="_blank" rel="noopener">Copilot CLI docs &nearr;</a>
       </div>
     </section>
 

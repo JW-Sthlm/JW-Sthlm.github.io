@@ -44,7 +44,7 @@ Microsoft products can appear as public examples and supported platforms. Micros
 
 The Copilot executive simulation stays internal until it passes a public release review: no Microsoft branding or internal labels, only publicly announced product surfaces, and a reviewed build published without its source.
 
-The retail kiosk avatar (`caip-demo-kiosk-avatar`) stays private until it has a fresh repository without the original history, a neutral name and a clean audit.
+The retail kiosk avatar repositories (`caip-demo-kiosk-avatar` and `druid-avatar-prototype`) stay private: they come from a customer engagement. The public version is `avatar-kiosk-starter`, a fresh repository with a single commit, a fictional brand and catalogue, and no engagement documents, subscription IDs or endpoints.
 
 Agent Otto is not promoted publicly. Its original working repository contained internal program transcripts and tenant-specific configuration. A sanitized copy also inherited deprecated Teams AI dependencies with unresolved high-severity advisories. It remains private until it is migrated to the current Teams SDK and passes the public audit.
 

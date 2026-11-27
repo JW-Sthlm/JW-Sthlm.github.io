@@ -21,6 +21,7 @@ REPOSITORIES = [
     "copilot-overview",
     "ai-operator-intro",
     "partner-library-starter",
+    "avatar-kiosk-starter",
     "slidemaster-framework",
     "executive-assistant-blueprint",
     "podcast-prep-skill",

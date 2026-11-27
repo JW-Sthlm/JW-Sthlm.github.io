@@ -343,6 +343,7 @@ details.field[open] summary::after { content: "\2212"; }
 
 /* Wide demo row */
 .demo-wide { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); background: var(--case-panel); border: 1px solid var(--edge); }
+.demo-wide + .demo-wide { margin-top: 1.25rem; }
 .demo-wide .preview { background: #141618; border-right: 1px solid var(--edge); }
 .demo-wide .preview img { width: 100%; height: 100%; object-fit: cover; object-position: top left; }
 .demo-wide .body { display: flex; flex-direction: column; gap: .75rem; padding: 1.4rem 1.5rem 1.5rem; }

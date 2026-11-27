@@ -42,6 +42,10 @@ Microsoft products can appear as public examples and supported platforms. Micros
 
 ## Withheld projects
 
+The Copilot executive simulation stays internal until it passes a public release review: no Microsoft branding or internal labels, only publicly announced product surfaces, and a reviewed build published without its source.
+
+The retail kiosk avatar (`caip-demo-kiosk-avatar`) stays private until it has a fresh repository without the original history, a neutral name and a clean audit.
+
 Agent Otto is not promoted publicly. Its original working repository contained internal program transcripts and tenant-specific configuration. A sanitized copy also inherited deprecated Teams AI dependencies with unresolved high-severity advisories. It remains private until it is migrated to the current Teams SDK and passes the public audit.
 
 The former Frontier Consultancy repository history is private. A clean compatibility repository keeps existing `frontier-consultancy-public` Pages links working and redirects them to the sanitized `frontier-consultancy-kit`.
@@ -54,5 +58,7 @@ The Capgemini audience deck deliberately retains Johan's visible speaker contact
 Its exception is limited to his exact address in the published deck and its v4
 archive. The Enter the Agentic Enterprise Era audience deck
 (`talks/agentic-enterprise-era-2026/deck.html`) has the same exception for the
-contact slide. Other Microsoft work email addresses and other file paths remain
-subject to the audit.
+contact slide. The speaker page (`speaker/index.html` in this repository) shows
+the same address as the booking contact for event organisers, with an exception
+limited to that file. Other Microsoft work email addresses and other file paths
+remain subject to the audit.

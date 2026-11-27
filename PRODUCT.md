@@ -6,11 +6,11 @@ brand
 
 ## Users
 
-Partner consultants, solution architects, AI practitioners, workshop participants, and curious non-developers arriving from LinkedIn or a shared link. They want to find something useful quickly, understand whether it is ready to use, and reach the source without navigating an unfiltered GitHub profile.
+Event organisers who need a bio, photos and talk topics. Customers, consultants, architects and AI practitioners arriving from LinkedIn, a talk or a shared link. They want to find the latest keynote and its PDF, try a prototype and reach its source without navigating an unfiltered GitHub profile.
 
 ## Product Purpose
 
-Create a clear public front door for Johan Wallquist's published workshops, courses, agent-run systems, and reusable AI projects. Success means visitors can identify the right work in under a minute, distinguish finished experiences from reusable assets and reference material, and open the most useful public or clearly marked gated destination.
+A clear public front door for Johan Wallquist's keynotes and prototypes on the agentic enterprise, plus Frontier-podden and the speaker material. Success means a visitor opens the latest keynote or its PDF, tries a prototype and finds its repository, and an organiser copies a bio and downloads a photo, each in under a minute.
 
 ## Brand Personality
 
@@ -20,7 +20,7 @@ The page should feel like an experienced architect opening his own toolbox, not 
 
 ## Anti-references
 
-- Generic developer portfolios with skill meters, technology-logo walls, and employment timelines.
+- Generic developer portfolios with skill meters and technology-logo walls. A compact experience list belongs only on the speaker page, where organisers need it.
 - A raw mirror of every public repository.
 - AI-themed landing pages with neon gradients, glowing brains, or vague claims.
 - Microsoft corporate styling that could imply these are official Microsoft products.
@@ -28,12 +28,12 @@ The page should feel like an experienced architect opening his own toolbox, not 
 
 ## Design Principles
 
-1. Lead with what someone can use, not with Johan's biography.
+1. Lead with keynotes and prototypes. The biography lives on the speaker page.
 2. Curate aggressively. A smaller useful collection beats a complete inventory.
-3. Separate published experiences from reusable assets, source-available references, and live demos.
-4. Keep GitHub visible as the source of truth.
-5. Sound like a practitioner sharing working material with peers.
-6. Treat Copilot Cowork, Microsoft Scout, and Copilot CLI as different runtimes for reusable skills, not separate editorial categories.
+3. Call built work prototypes, not demos. Label what runs live, what is a template and what runs in Copilot.
+4. List a prototype only when its repository is public, licensed and passes the weekly audit.
+5. Keep GitHub visible as the source of truth.
+6. Sound like a practitioner sharing working material with peers.
 
 ## Accessibility & Inclusion
 

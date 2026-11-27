@@ -1,15 +1,26 @@
-# Johan Wallquist: public projects
+# Johan Wallquist: keynotes and prototypes
 
-Source for [jw-sthlm.github.io](https://jw-sthlm.github.io/), a curated front door to Johan Wallquist's published workshops, courses, agent-run systems, and reusable AI projects.
+Source for [jw-sthlm.github.io](https://jw-sthlm.github.io/): keynotes and prototypes for the agentic enterprise, the Frontier-podden podcast and a speaker page for event organisers.
 
-The compact [links page](https://jw-sthlm.github.io/links/) is the self-hosted replacement for the previous Bitly link-in-bio page.
+## Pages
 
-The website distinguishes between:
+| Path | Source | Job |
+|---|---|---|
+| `/` | `index.html` | Latest keynote, selected prototypes, Frontier-podden, courses and programmes |
+| `/talks/` | [JW-Sthlm/talks](https://github.com/JW-Sthlm/talks) | Every talk with the interactive deck and the PDF |
+| `/prototypes/` | `prototypes/index.html` | Selected prototypes with repository links and readiness badges |
+| `/speaker/` | `speaker/index.html` | Bios in English and Swedish, headshots, talk topics, experience and contact |
+| `/links/` | `links/index.html` | Self-hosted link page for social profiles |
 
-- **Published work:** finished workshops, learning experiences, and operating systems with a public or clearly marked gated front door.
-- **MIT licensed:** explicitly reusable code and templates.
-- **Live demo:** a working public web experience.
-- **Source available:** public source provided as a reference, without a general reuse license.
+Shared styles and behaviour are in `assets/site.css` and `assets/site.js`. The keynotes page in the talks repository loads the same files from `/assets/`.
+
+The site calls published builds **prototypes**. A prototype is listed only when its repository is public, licensed and passes the weekly audit.
+
+## Badges on the prototypes page
+
+- **Template and deploy guide:** a GitHub template with deploy steps in the README.
+- **Live:** a public URL that works without sign-in.
+- **Runs in Copilot:** a skill or plugin installed in the visitor's own Copilot.
 
 ## Local preview
 
@@ -17,7 +28,7 @@ The website distinguishes between:
 python -m http.server 8080
 ```
 
-Open `http://localhost:8080`.
+Open `http://localhost:8080`. Keynote thumbnails come from `/talks/`, so they only load on the live domain or when a local server also maps the talks repository.
 
 ## Publishing
 
@@ -27,4 +38,4 @@ GitHub Pages serves the repository root from the `main` branch.
 
 These are personal projects and community assets. They are not Microsoft products.
 
-See [PUBLIC-RELEASE-CHECKLIST.md](PUBLIC-RELEASE-CHECKLIST.md) for the publishing and reuse review applied to featured repositories.
+See [PUBLIC-RELEASE-CHECKLIST.md](PUBLIC-RELEASE-CHECKLIST.md) for the publishing and reuse review applied to featured repositories, and for the projects that are held back.

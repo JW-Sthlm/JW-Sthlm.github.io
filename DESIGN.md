@@ -2,46 +2,42 @@
 
 ## Direction
 
-The site uses the **Architect's Flight Case** concept. It should feel like an experienced partner strategist opening a professional case before a workshop: practical, prepared, and easy to explore.
-
-The metaphor stays visual. Projects are arranged as trays, labels, and a compact manifest, without trying to imitate a physical case too literally.
+The site keeps the **Architect's Flight Case** identity: graphite case, off-white trays and rose actions. The metaphor stays visual and never drives the navigation. Navigation follows the content: keynotes, prototypes, speaker.
 
 ## Theme
 
 - Graphite and near-black carry most of the page.
-- Crisp off-white surfaces hold the most important learning and workshop content.
-- Deep rose is the main identity and action color.
-- Safety yellow is reserved for field notes and small status signals.
-- Licensing is quiet metadata. It remains visible without competing with project type or purpose.
+- Crisp off-white trays hold the keynotes and the podcast, and the bios on the speaker page.
+- Deep rose is the identity and action colour. The headline accent uses the bright rose.
+- Safety yellow is reserved for small status signals, such as readiness badges.
+- Licensing is quiet metadata.
 
 ## Typography
 
 - Display and labels: Barlow Condensed.
 - Body: Atkinson Hyperlegible.
-- Display copy is large and direct. Body text uses simple English and stays within comfortable reading lengths.
+- Commands use the system monospace font, only for literal commands.
 
 ## Information Architecture
 
-1. The hero introduces Johan as a Cloud & AI Advisor at Microsoft, focused on AI and AI-first ways of working.
-2. Three entry points separate learning, reusable skills and agents, and talks or workshop material.
-3. The top tray highlights Frontier Consultancy, Operator Hour with AI Operator, and the Agentic AI Partner Library.
-4. One filterable list contains everything published.
-5. Field notes explain the agent environments in plain language.
-6. The page ends with GitHub and LinkedIn actions, followed by subdued licensing and disclaimer text.
+1. Home: headline "Keynotes and prototypes for the agentic enterprise", the latest keynote on a tray with one action and a PDF chip, three selected prototypes, Frontier-podden, courses and programmes with Frontier Consultancy last, and a speaker band.
+2. `/talks/` (talks repository): every talk with Open the deck and Download PDF, grouped deliveries for repeated talks, and a language filter.
+3. `/prototypes/`: Azure prototypes, Copilot skills and event kits, with readiness badges, filters and foldouts.
+4. `/speaker/`: bios in English and Swedish with copy buttons and word counts, three headshots with downloads, talk topics, experience, facts and an invitation block.
+5. `/links/`: a link-in-bio page.
 
 ## Components
 
-- Case label navigation with a persistent mobile menu.
-- Job trays for the three main visitor needs.
-- Three visually distinct featured-project treatments.
-- Unified project rows with project type, quiet license metadata, description, and one action.
-- Filter controls with pressed states, result count, and an empty state.
-- Field-note panel for supporting explanations.
+- Header with the name plate, three page links, and GitHub and Spotify icons.
+- Feature keynote with the real title slide.
+- Prototype cards with an SVG architecture preview or a real screenshot, readiness badge, stack chips, foldout and actions.
+- A numbered three-step strip, used once per page because it is a real sequence.
+- Programme rows, podcast tile, bio cards, experience list and catalogue filters with live counts.
 
 ## Motion
 
-The hero uses one short opening sequence inspired by lifting a case lid. Reduced-motion users receive the complete layout immediately. Hover movement is limited to small button translations.
+The home hero rises once on load. Reduced-motion users get the complete layout immediately. Hover movement is limited to small button lifts.
 
 ## Imagery
 
-Use Johan's existing portrait as the case-lid image. Do not add generated people, stock photography, or decorative AI imagery.
+Use real title slides, real screenshots and Johan's own photos. Architecture previews are drawn in SVG. No generated people, stock photography or decorative AI imagery.

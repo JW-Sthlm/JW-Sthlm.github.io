@@ -17,6 +17,7 @@ REPOSITORIES = [
     "frontier-consultancy-kit",
     "talks",
     "build-2026-gold",
+    "ignite-2026-gold",
     "copilot-overview",
     "ai-operator-intro",
     "partner-library-starter",
@@ -82,6 +83,9 @@ APPROVED_PUBLIC_CONTACTS = {
 }
 
 APPROVED_SPEAKER_CONTACTS = {
+    "JW-Sthlm.github.io": {
+        "speaker/index.html": {"jwallquist@microsoft.com"},
+    },
     "talks": {
         "capgemini-graduate-consulting-2026/deck.html": {"jwallquist@microsoft.com"},
         "capgemini-graduate-consulting-2026/releases/v4-20260922/deck.html": {
